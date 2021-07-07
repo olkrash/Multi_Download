@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tiny.cloud/1/lp672nwky3er5kpdd3m1pshy1wcebelzgu0nino8wp2ej2sr/tinymce/5/tinymce.min.js"
+            referrerpolicy="origin"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <title>Multi Download</title>
+</head>
+<body>
+<div class="container">
+    <form action="mail_sender.php" method="post" id="mail" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Enter an email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="mail" placeholder="Enter email"
+                   required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+        <label for="mytextarea"></label>
+        <textarea name="text" cols="50" rows="10" id="mytextarea"></textarea>
+        <input type="file" name="file" id="file">
+        <div class="upload-area" id="uploadfile">
+            <h1>Drag and Drop the photo here<br/>Or<br/>Click to select file</h1>
+        </div>
+        <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
